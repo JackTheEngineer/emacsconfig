@@ -16,6 +16,8 @@
 (load "orgConfig")
 (load "htmlExporter")
 
+(savehist-mode 1)
+
 (add-to-list 'auto-mode-alist '("\\.ucbuild\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.lucius\\'" . css-mode))
 
@@ -289,13 +291,22 @@
  '(indent-tabs-mode nil)
  '(ledger-binary-path "/usr/bin/hledger")
  '(lsp-haskell-server-wrapper-function 'identity)
+ '(org-agenda-files '("~/selfemployment/agenda.org"))
+ '(org-agenda-loop-over-headlines-in-active-region nil)
+ '(org-hide-leading-stars t)
+ '(org-startup-indented t)
+ '(org-support-shift-select 'always)
+ '(org-todo-keywords
+   '((sequence "TODO(t)" "|" "DONE(d)" "CANCELLED(c)")
+     (sequence "TASK(f)" "|" "DONE(d)")
+     (sequence "QUESTION(q)" "|" "ANSWERED(a)")
+     (sequence "MAYBE(m)" "|" "CANCELLED(c)")))
  '(package-selected-packages
-   '(fzf ggtags deadgrep ace-window exec-path-from-shell ztree shakespeare-mode nix-mode ledger-mode package-utils hledger-mode which-key mu4e-alert mu4e-column-faces mu4e-conversation mu4e-jump-to-list mu4e-maildirs-extension mu4e-marker-icons mu4e-overview mu4e-query-fragments ox-pandoc ox-report ox-reveal hamlet-mode yaml-mode use-package realgud rainbow-delimiters pdf-tools magit lsp-ui lsp-haskell latexdiff latex-unicode-math-mode latex-pretty-symbols latex-math-preview latex-extra laas helm-projectile helm-lsp helm-flycheck elpy cdlatex bibtex-utils bibtex-completion auctex-lua auctex-latexmk))
- )
+   '(savehist-mode fzf ggtags deadgrep ace-window exec-path-from-shell ztree shakespeare-mode nix-mode ledger-mode package-utils hledger-mode which-key mu4e-alert mu4e-column-faces mu4e-conversation mu4e-jump-to-list mu4e-maildirs-extension mu4e-marker-icons mu4e-overview mu4e-query-fragments ox-pandoc ox-report ox-reveal hamlet-mode yaml-mode use-package realgud rainbow-delimiters pdf-tools magit lsp-ui lsp-haskell latexdiff latex-unicode-math-mode latex-pretty-symbols latex-math-preview latex-extra laas helm-projectile helm-lsp helm-flycheck elpy cdlatex bibtex-utils bibtex-completion auctex-lua auctex-latexmk)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "gray21" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "ADBO" :family "Source Code Pro")))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "gray21" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "ADBO" :family "Source Code Pro")))))
